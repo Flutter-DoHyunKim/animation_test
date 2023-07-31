@@ -61,6 +61,7 @@ class _TestAnimationState extends State<TestAnimation>
             ),
           )),
     );*/
+    //chrome으로 돌려보기
     return Positioned.fill( //stack 의 모든 자리를 다 차지하게 된다
       child:Transform(//scrolling percentage 높이가 1로 갈때 animation은 0으로 가도록 해준다(0->1, 1->0)
           transform: Matrix4.identity()..setEntry(3, 2, 0.001)..scale(scale, scale, 1)..rotateX(rotX)..rotateY(rotX), //x,y축 모두 2배로 키워준다
