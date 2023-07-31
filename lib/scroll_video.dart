@@ -38,7 +38,7 @@ class _ScrollVideoState extends State<ScrollVideo> with SingleTickerProviderStat
   }
   @override
   Widget build(BuildContext context) {
-    final imageNum=scrollStatusNotifier.scrollPos~/10; //scroll 속도가 빨라서 10으로 나눠 준다
+    final imageNum=scrollStatusNotifier.scrollPos~/10>=120?120:scrollStatusNotifier.scrollPos~/10; //scroll 속도가 빨라서 10으로 나눠 준다
 
     return  Positioned.fill(child: IndexedStack(
       index: imageNum,
